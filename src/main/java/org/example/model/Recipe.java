@@ -1,5 +1,6 @@
 package org.example.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -10,8 +11,10 @@ public class Recipe {
 
     @Id
     @GeneratedValue
+    @Column(name="recipeId")
     private Long id;
 
+    @Column(name="name")
     private String name;
 
     public Recipe(Long id) {

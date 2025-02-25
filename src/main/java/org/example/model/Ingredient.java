@@ -1,8 +1,6 @@
 package org.example.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -10,10 +8,14 @@ public class Ingredient {
 
     @Id
     @GeneratedValue
+    @Column(name="ingredientId")
     private Long id;
 
+    @Column(name="name")
     private String name;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name="type")
     private IngredientType type;
 
     public Ingredient(Long id, String name, IngredientType type) {
