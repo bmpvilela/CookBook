@@ -21,6 +21,7 @@ const getRecipes = (request, response) => {
 
         response.status(200).json(responseReturn);
     })
+}
 
 const getRecipeById = (request, response) => {
     var responseReturn = new ResponseClass();
@@ -89,7 +90,7 @@ const deleteRecipe = (request, response) => {
     })
 }
 
-export default () {
+export default {
     getRecipes,
     getRecipeById,
     createRecipe,
