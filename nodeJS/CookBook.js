@@ -4,7 +4,6 @@ import db from "./queries.js"
 
 const app = express();
 const PORT = 5000
-//const db = require("queries");
 
 app.use(bodyParser.json());
 app.use(

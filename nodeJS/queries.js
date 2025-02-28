@@ -1,4 +1,8 @@
-const Pool = require("pg").Pool;
+import ResponseClass from "./model/response.js"
+
+import pg from "pg";
+const { Pool } = pg;
+
 const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
@@ -6,6 +10,8 @@ const pool = new Pool({
     password: '123',
     port: 5432
 });
+
+// QUERIES
 
 const getRecipes = (request, response) => {
     var responseReturn = new ResponseClass();
@@ -89,6 +95,8 @@ const deleteRecipe = (request, response) => {
         response.status(201).send("Recipe deleted");
     })
 }
+
+// EXPORT
 
 export default {
     getRecipes,
