@@ -8,17 +8,13 @@ public class Ingredient {
 
     @Id
     @GeneratedValue
-    @Column(name="ingredientId")
     private Long id;
 
-    @Column(name="name")
     private String name;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name="type")
-    private IngredientType type;
+    private String type;
 
-    public Ingredient(Long id, String name, IngredientType type) {
+    public Ingredient(Long id, String name, String type) {
         this.id = id;
         this.name = name;
         this.type = type;
@@ -43,11 +39,11 @@ public class Ingredient {
         this.name = name;
     }
 
-    public IngredientType getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(IngredientType type) {
+    public void setType(String type) {
         this.type = type;
     }
 

@@ -11,10 +11,8 @@ public class Recipe {
 
     @Id
     @GeneratedValue
-    @Column(name="recipeId")
     private Long id;
 
-    @Column(name="name")
     private String name;
 
     public Recipe(Long id) {

@@ -16,7 +16,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/menu")
-public class MenuController {
+public class CookBookController {
 
     @Autowired
     private IngredientRepository ingredientRepository;
