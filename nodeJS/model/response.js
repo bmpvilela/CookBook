@@ -9,4 +9,4 @@ class Response {
 
 // EXPORT
 
-export default { Response };
+export default class { Response };
