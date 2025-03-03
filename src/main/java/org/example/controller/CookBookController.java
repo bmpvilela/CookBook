@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/menu")
+@RequestMapping("/cookbook")
 public class CookBookController {
 
     @Autowired
